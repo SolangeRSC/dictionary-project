@@ -9,7 +9,8 @@ function App() {
         <header className="App-header">Dictionary Project</header>
         <Dictionary />
         <footer>
-          Coded by Solange Custódio and open-sourced on <a href="">GitHub</a>
+          Coded by Solange Custódio and open-sourced on{" "}
+          <a href="https://github.com/SolangeRSC/dictionary-project">GitHub</a>
         </footer>
       </div>
     </div>
