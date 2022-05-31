@@ -6,8 +6,8 @@ import Phonetic from "./Phonetic";
 export default function Results(props) {
   if (props.results) {
     return (
-      <div className="Results text-capitalize">
-        <h2>{props.results.word}</h2>
+      <div className="Results ">
+        <h2 className="text-capitalize">{props.results.word}</h2>
         {props.results.phonetics.map(function(phonetic, index) {
           return (
             <div key={index}>
