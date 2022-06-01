@@ -22,7 +22,7 @@ export default function Dictionary() {
     axios.get(urlApi).then(handleResponse);
 
     let apiKeyPexels = `563492ad6f917000010000017a34695274b64d3685f994091c48fb5b`;
-    let urlApiPexels = `https://api.pexels.com/v1/search?query=${keyword}`;
+    let urlApiPexels = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     axios
       .get(urlApiPexels, {
         header: { Authorization: `Bearer ${apiKeyPexels}` },
@@ -35,11 +35,12 @@ export default function Dictionary() {
   }
   return (
     <div className="Dictionaty">
-      <form onSubmit={search}>
+      <form onSubmit={search} className="searchBar form-label ">
         <input type="search" onChange={handleKeyword}></input>
       </form>
-      <Photos photos={photos} />
+
       <Results results={results} />
+      <Photos photos={photos} />
     </div>
   );
 }
